@@ -59,9 +59,8 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     async function loadFoods(): Promise<void> {
-      // Load Foods from API
+      api.get('foods').then(response => setFoods(response.data))
     }
-
     loadFoods();
   }, [selectedCategory, searchValue]);
 
