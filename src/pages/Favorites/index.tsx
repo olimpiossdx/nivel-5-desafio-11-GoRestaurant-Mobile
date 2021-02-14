@@ -32,9 +32,8 @@ const Favorites: React.FC = () => {
 
   useEffect(() => {
     async function loadFavorites(): Promise<void> {
-      // Load favorite foods from api
+      api.get('favorites').then(response => setFavorites(response.data));
     }
-
     loadFavorites();
   }, []);
 
@@ -45,25 +44,17 @@ const Favorites: React.FC = () => {
       </Header>
 
       <FoodsContainer>
-        <FoodList
-          data={favorites}
-          keyExtractor={item => String(item.id)}
-          renderItem={({ item }) => (
-            <Food activeOpacity={0.6}>
-              <FoodImageContainer>
-                <Image
-                  style={{ width: 88, height: 88 }}
-                  source={{ uri: item.thumbnail_url }}
-                />
-              </FoodImageContainer>
-              <FoodContent>
-                <FoodTitle>{item.name}</FoodTitle>
-                <FoodDescription>{item.description}</FoodDescription>
-                <FoodPricing>{item.formattedPrice}</FoodPricing>
-              </FoodContent>
-            </Food>
-          )}
-        />
+        <FoodList data={favorites} keyExtractor={item => String(item.id)}
+          renderItem={({ item }) => (<Food activeOpacity={0.6}>
+            <FoodImageContainer>
+              <Image style={{ width: 88, height: 88 }} source={{ uri: item.thumbnail_url }} />
+            </FoodImageContainer>
+            <FoodContent>
+              <FoodTitle>{item.name}</FoodTitle>
+              <FoodDescription>{item.description}</FoodDescription>
+              <FoodPricing>{item.formattedPrice}</FoodPricing>
+            </FoodContent>
+          </Food>)} />
       </FoodsContainer>
     </Container>
   );
