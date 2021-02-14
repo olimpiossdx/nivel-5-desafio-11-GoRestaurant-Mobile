@@ -34,7 +34,6 @@ const Orders: React.FC = () => {
     async function loadOrders(): Promise<void> {
       api.get('orders').then(response => setOrders(response.data));
     }
-
     loadOrders();
   }, []);
 
