@@ -21,6 +21,6 @@ Para aplicação mobile:
 ```
 <p>Imagens da aplicação</p>
 <p float="left">
-<img alt='Certificado Gostack' width="425" title='Certificado Gostack' src='.github/goRestaurant/Entrar.png' />
-<img alt='Certificado Gostack' width="425" title='Certificado Gostack' src='.github/goRestaurant/Home.png' />
+<img alt='Certificado Gostack' width="405" title='Certificado Gostack' src='.github/goRestaurant/Entrar.png' />
+<img alt='Certificado Gostack' width="405" title='Certificado Gostack' src='.github/goRestaurant/Home.png' />
 </p>
