@@ -20,6 +20,7 @@ Para aplicação mobile:
   yarn && yarn android && yarn start
 ```
 <p>Imagens da aplicação</p>
-
+<p float="left">
 <img alt='Certificado Gostack' width="425" title='Certificado Gostack' src='.github/goRestaurant/Entrar.png' />
 <img alt='Certificado Gostack' width="425" title='Certificado Gostack' src='.github/goRestaurant/Home.png' />
+</p>
